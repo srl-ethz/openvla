@@ -823,6 +823,8 @@ def tdroid_dataset_transform(trajectory: Dict[str, Any]) -> Dict[str, Any]:
     trajectory["observation"]["gripper_state"] = trajectory["observation"]["gripper_position"][:, -1:]
     return trajectory
 
+def dexformer_finetuning_transform(trajectory: Dict[str, Any]) -> Dict[str, Any]:
+    return trajectory
 
 # === Registry ===
 OXE_STANDARDIZATION_TRANSFORMS = {
@@ -898,4 +900,6 @@ OXE_STANDARDIZATION_TRANSFORMS = {
     ### DROID Finetuning datasets
     "droid_wipe": droid_finetuning_transform,
     "droid_100": droid_finetuning_transform,
+    ### CUSTOM Finetuning datasets
+    "dexformer_dataset": dexformer_finetuning_transform,
 }

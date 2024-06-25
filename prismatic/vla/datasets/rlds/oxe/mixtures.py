@@ -192,5 +192,10 @@ OXE_NAMED_MIXTURES: Dict[str, List[Tuple[str, float]]] = {
     "droid_wipe": [
         ("droid_wipe", 1.0),
     ],
+
+    # === HAND Custom Finetuning Datasets ===
+    "dexformer_dataset": [
+        ("dexformer_dataset", 1.0),
+    ],
 }
 # fmt: on
